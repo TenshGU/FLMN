@@ -19,6 +19,8 @@ parser.add_argument('-ncoord', '--num_of_coordination', type=int, default=3, hel
 parser.add_argument('-sc', '--size_of_coordination', type=int, default=6, help='size of the coordinations in each edge')
 # 边节点中的备用设备个数
 parser.add_argument('-sbc', '--standby_clients', type=int, default=3, help='size of standby clients')
+# 边节点中缓存的大小
+parser.add_argument('-sec', '--size_of_edge_cache', type=int, default=2000, help='size of edge cache')
 # Insufficient cache threshold
 parser.add_argument('-ict', '--insufficient_cache_threshold', type=int, default=3, help='Insufficient cache threshold')
 # 每一边的客户端数量n，实际应该是不一样才行

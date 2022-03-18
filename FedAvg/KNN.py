@@ -1,9 +1,9 @@
 import random
 from sklearn.neighbors import KNeighborsClassifier
-import getClientsData as gkd
+import getClientsData as gcd
 import time
 
-x, y, weights = gkd.file2matrix("clientsData.txt")
+x, y, weights = gcd.file2matrixWithLabel("clientsData.txt")
 knn = KNeighborsClassifier(n_neighbors=5, weights='distance')
 knn.fit(x, y)
 print(x.shape)

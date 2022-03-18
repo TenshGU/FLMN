@@ -61,7 +61,7 @@ if __name__ == "__main__":
     a, b, c = 0, 0, 0
 
     with open(args['path'], mode='w') as fileObj:
-        for i in range(2000):
+        for i in range(3000):
             data_size = random.randint(200, 3000)
             # 500 -> 7s，假定平均1s处理100数据
             calPower = random.randint(data_size * 4, data_size * 20)
@@ -70,14 +70,14 @@ if __name__ == "__main__":
 
             power = random.randint(1, 100)
 
-            chosen_times = random.randint(0, 1000)
+            chosen_times = random.randint(1, 1000)
 
             off_line_factor = 1
             hardWork = random.randint(1, 100)
-            if hardWork <= 55:
+            if hardWork <= 40:
                 # 全勤
                 train_times = chosen_times
-            elif 55 < hardWork <= 80:
+            elif 40 < hardWork <= 60:
                 off_line_factor = random.uniform(0.65, 0.99)
                 train_times = int(chosen_times * off_line_factor)
             else:

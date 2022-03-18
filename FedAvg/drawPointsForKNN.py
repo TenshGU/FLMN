@@ -10,7 +10,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     args = args.__dict__  # 得到参数字典
 
-    x, y = gcd.file2matrix(args['path'])
+    x, y, w = gcd.file2matrixWithLabel(args['path'])
 
     print(type(x), type(y))
     print(x)

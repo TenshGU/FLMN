@@ -83,7 +83,8 @@ class Client(object):
             else:
                 time.sleep(nwDelay / 1000)
 
-            return {'clientInfo': self.clientInfo, 'stateDict': state_dict}
+            info = [self.clientInfo['dataSize'], self.clientInfo['calPower'], self.clientInfo['nwDelay'], self.clientInfo['power']]
+            return {'clientInfo': info, 'stateDict': state_dict}
 
     def local_val(self):
         pass
